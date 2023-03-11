@@ -1,0 +1,6 @@
+services:
+  paramconverter_example.content_entity_example:
+    class: Drupal\paramconverter_example\ParamConverter\ContentEntityExampleParamConverter
+    tags:
+      - { name: paramconverter }
+    arguments: ["@entity_type.manager"]

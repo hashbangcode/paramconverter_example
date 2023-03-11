@@ -1,0 +1,4 @@
+name: ParamConverter Example
+type: module
+description: Example module showing the function of a ParamConverter service.
+core_version_requirement: ^9 || ^10

@@ -1,0 +1,15 @@
+<?php
+
+use \Drupal\paramconverter_example\Entity\ContentEntityExample;
+
+/**
+ * Implements hook_install().
+ */
+function paramconverter_example_install($is_syncing) {
+
+  $contentEntityExample = ContentEntityExample::create([
+    'label' => 'Test content entity',
+    'slug' => 'test-content-entity',
+  ]);
+  $contentEntityExample->save();
+}

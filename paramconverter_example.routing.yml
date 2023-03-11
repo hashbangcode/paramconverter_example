@@ -1,0 +1,10 @@
+paramconverter_example.view:
+  path: "/content_entity_example/{content_entity_example}"
+  defaults:
+    _controller: '\Drupal\paramconverter_example\Controller\ExampleController::viewContentEntityExample'
+  requirements:
+    _permission: "view content"
+  options:
+    parameters:
+      content_entity_example:
+        type: content_entity_example
