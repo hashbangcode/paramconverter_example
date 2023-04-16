@@ -33,15 +33,10 @@ class ContentEntityExampleParamConverter implements ParamConverterInterface {
    */
   public function convert($value, $definition, $name, array $defaults) {
     $contentEntityExampleParamConverterStorage = $this->entityTypeManager->getStorage($definition['type']);
-    if (is_numeric($value)) {
-      // Allow the entity to be loaded via the ID value.
-      return $contentEntityExampleParamConverterStorage->load($value);
-    }
-    else {
-      $results = $contentEntityExampleParamConverterStorage->loadByProperties(['slug' => $value]);
-      if (count($results) > 0) {
-        return array_pop($results);
-      }
+
+    $results = $contentEntityExampleParamConverterStorage->loadByProperties(['slug' => $value]);
+    if (count($results) > 0) {
+      return array_pop($results);
     }
 
     return NULL;
