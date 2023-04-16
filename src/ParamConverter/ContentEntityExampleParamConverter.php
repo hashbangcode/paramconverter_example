@@ -7,7 +7,7 @@ use Symfony\Component\Routing\Route;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 
 /**
- * A parameter converter class to allow loading of ContentEntityExample entities.
+ * A parameter converter class to allow loading ContentEntityExample entities.
  */
 class ContentEntityExampleParamConverter implements ParamConverterInterface {
 
